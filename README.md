@@ -27,7 +27,7 @@ Once Pages is enabled, GitHub publishes the change automatically; allow a few mi
 
 ## Add a video
 
-1. Open the person's video folder on GitHub: [Andrew](videos/andrew/), [Kevin](videos/kevin/), or [Erik](videos/erik/).
+1. Open the person's `videos/<person>/` directory on GitHub.
 2. Choose **Add file → Upload files**, select your MP4 (for example, `half-cab-flip.mp4`), and **Commit changes** to `main`.
 3. Edit the person's file in `data/` and append the filename to the landed trick:
 
@@ -37,7 +37,7 @@ Once Pages is enabled, GitHub publishes the change automatically; allow a few mi
 
 4. Commit the text edit to `main`. Wait for Pages to deploy, reload the website, and click the trick name.
 
-Use just the filename, matching capitalization and spaces exactly. The example above uses `videos/andrew/half-cab-flip.mp4`. The filename does not have to match the trick name. Leave the third field off for tricks without a video.
+Use just the filename, matching capitalization and spaces exactly. The example above uses `videos/<person>/half-cab-flip.mp4`. The filename does not have to match the trick name. Leave the third field off for tricks without a video.
 
 Use an MP4 containing H.264 video (AAC audio if included). Renaming a `.mov` file does not convert it. GitHub's browser upload limit is **25 MiB per file**. [Upload instructions](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository) · [Video formats](https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Video_codecs)
 
@@ -67,6 +67,6 @@ python3 -m http.server 8000 --bind 127.0.0.1
 Visit **http://localhost:8000**. Stop the server with Ctrl+C.
 Use the local server instead of double-clicking HTML files: browsers need HTTP to load the trick data and JavaScript modules.
 
-- `index.html` — three links to the individual lists
-- `andrew.html`, `kevin.html`, `erik.html` — individual trick lists
-- `data/andrew.txt`, `data/kevin.txt`, `data/erik.txt` — the editable trick lists
+- `index.html` — links to the individual lists
+- `<person>.html` — individual trick lists
+- `data/<person>.txt` — the editable trick lists
