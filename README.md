@@ -35,20 +35,10 @@ Nollie 360 Flip
 - Under **[Not Yet Done]**, write only the trick name, one per line. These rows appear in gray, without dates, below the landed tricks.
 - When a trick is landed, **move** its line from `[Not Yet Done]` to `[Landed]` and append its date after a `|`. Remove the old unfinished entry so it doesn't appear twice.
 - Landed tricks display newest first. Unfinished tricks keep their order from the file.
-- Keep one entry per trick. Repeated entries appear as separate rows.
-- Blank lines and lines starting with `#` are ignored. Keep the section headings on their own lines.
-- Names are plain text; apostrophes, commas, and ampersands are fine. The `|` character separates dates and names, so don't use it in unfinished names.
-- Correct a name or date directly, or delete a line to remove it.
-- Empty sections are fine. A file with no entries displays “No tricks yet,” as Erik's does initially.
-- Keep all three files, even if one has no entries.
 
 Click **Commit changes** to save to the branch used for Pages (normally `main`).
 If you create a pull request, merge it into that branch before expecting a site update.
 Once Pages is enabled, GitHub publishes the change automatically; allow a few minutes, then reload the page. Open pages do not update in real time.
-
-An invalid line or impossible date shows a load error for that person's list instead of silently dropping an achievement. Fix the line, commit, and reload. The browser console includes the file and line number.
-
-**The root `tricklist.txt` is the original import for reference. Edit the files in `data/` from now on.**
 
 ## Host on GitHub Pages when ready
 
@@ -56,24 +46,6 @@ This site is configured for GitHub Pages using the `main` branch and the reposit
 
 - Website: https://kevinventullo.github.io/FortyForForty/
 - Repository: https://github.com/kevinventullo/FortyForForty
-
-To set up the same site in another repository:
-
-1. Create a GitHub repository, such as `FortyForForty`, and push or upload this folder's contents.
-2. In the repository, open **Settings → Pages**.
-3. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
-4. Select **main** and **/(root)**, then save.
-5. Wait for deployment. GitHub will show the live address, usually `https://YOUR-USERNAME.github.io/FortyForForty/`.
-
-Use a public repository for Pages on GitHub Free. The included `.nojekyll` file serves this static site without Jekyll. All links and data requests are relative, so both repository URLs and custom domains work.
-
-The GitHub web editor commits data updates to the same source branch, which triggers publication automatically. No manual build or separate generated files are needed.
-
-[GitHub's publishing-source instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
-
-## Optional developer checks
-
-With Node.js 20 or later:
 
 ```sh
 node --test tests/data.test.mjs
