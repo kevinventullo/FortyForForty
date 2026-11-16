@@ -1,0 +1,10 @@
+# Kevin's tricks
+# Landed: Trick name | YYYY-MM-DD
+# Not Yet Done: Trick name only, no date
+# When landed, move the trick to [Landed] and add its date.
+
+[Landed]
+Fakie shove | 2026-10-10
+Fakie bigspin | 2026-10-10
+
+[Not Yet Done]

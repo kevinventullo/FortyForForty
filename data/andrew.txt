@@ -1,0 +1,20 @@
+# Andrew's tricks
+# Landed: Trick name | YYYY-MM-DD
+# Not Yet Done: Trick name only, no date
+# When landed, move the trick to [Landed] and add its date.
+
+[Landed]
+Heelflip | 2026-10-10
+Kickflip | 2026-10-10
+Nollie bs bigspin | 2026-10-10
+Nollie Flip | 2026-10-10
+Switch Heel | 2026-10-10
+No comply bigspin heel | 2026-11-10
+Half cab flip | 2026-11-14
+Fakie flip | 2026-11-14
+Nollie varial kickflip | 2026-11-14
+
+[Not Yet Done]
+Nollie 360 Flip
+Nollie bs flip
+Switch hardflip
