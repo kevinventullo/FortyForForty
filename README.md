@@ -3,21 +3,6 @@
 Skateboarding trick lists.
 Plain HTML, CSS, and JavaScript.
 
-## Run locally
-
-From this folder:
-
-```sh
-python3 -m http.server 8000 --bind 127.0.0.1
-```
-
-Visit **http://localhost:8000**. Stop the server with Ctrl+C.
-Use the local server instead of double-clicking HTML files: browsers need HTTP to load the trick data and JavaScript modules.
-
-- `index.html` — three links to the individual lists
-- `andrew.html`, `kevin.html`, `erik.html` — individual trick lists
-- `data/andrew.txt`, `data/kevin.txt`, `data/erik.txt` — the editable trick lists
-
 ## Add or correct tricks
 
 Open the person's file in `data/` on GitHub and click the pencil (Edit). Each file has two sections:
@@ -53,3 +38,18 @@ node --check assets/app.mjs
 ```
 
 The tests cover section editing, moving unfinished tricks to landed, date validation, sorting, time-zone-safe dates, and preservation of the initial imported tricks. No npm install is needed.
+
+## Run locally
+
+From this folder:
+
+```sh
+python3 -m http.server 8000 --bind 127.0.0.1
+```
+
+Visit **http://localhost:8000**. Stop the server with Ctrl+C.
+Use the local server instead of double-clicking HTML files: browsers need HTTP to load the trick data and JavaScript modules.
+
+- `index.html` — three links to the individual lists
+- `andrew.html`, `kevin.html`, `erik.html` — individual trick lists
+- `data/andrew.txt`, `data/kevin.txt`, `data/erik.txt` — the editable trick lists
