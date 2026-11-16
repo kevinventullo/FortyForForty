@@ -1,9 +1,13 @@
-import { loadTricks, sortTricks, formatDate } from "./data.mjs";
+import { loadTricks, sortTricks, formatDate, getVideoURL } from "./data.mjs";
+import { createVideoPlayer } from "./video.mjs";
+
+let player;
 
 async function renderTricks() {
   const region = document.querySelector("[data-tricks]");
+  const person = document.body.dataset.person;
   try {
-    const tricks = sortTricks(await loadTricks(document.body.dataset.person));
+    const tricks = sortTricks(await loadTricks(person));
     region.replaceChildren();
     if (!tricks.length) {
       const message = document.createElement("p");
@@ -16,8 +20,20 @@ async function renderTricks() {
     list.className = "trick-list";
     for (const trick of tricks) {
       const item = document.createElement("li");
-      const name = document.createElement("span");
+      const name = document.createElement(trick.video ? "a" : "span");
+      name.className = "trick-name";
       name.textContent = trick.name;
+      if (trick.video) {
+        name.href = getVideoURL(person, trick.video);
+        name.setAttribute("aria-haspopup", "dialog");
+        name.setAttribute("aria-label", `Watch ${trick.name}`);
+        name.addEventListener("click", (event) => {
+          if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0) return;
+          event.preventDefault();
+          player ??= createVideoPlayer();
+          player.open(trick.name, name.href, name);
+        });
+      }
       item.append(name);
       if (trick.date === null) {
         item.className = "not-yet-done";

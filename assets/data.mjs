@@ -27,16 +27,34 @@ export function parseTricks(text, source = "Trick list") {
       tricks.push({ date: null, name: line });
       continue;
     }
-    const match = /^([^|]+?)\s*\|\s*(\d{4}-\d{2}-\d{2})$/.exec(line);
-    if (!match || !match[1].trim()) throw new Error(`${source}, line ${index + 1}: use Trick name | YYYY-MM-DD under [Landed].`);
-    const [, name, date] = match;
+    const match = /^([^|]+?)\s*\|\s*(\d{4}-\d{2}-\d{2})(?:\s*\|\s*([^|]*))?$/.exec(line);
+    if (!match || !match[1].trim()) throw new Error(`${source}, line ${index + 1}: use Trick name | YYYY-MM-DD, optionally followed by | filename.mp4, under [Landed].`);
+    const [, name, date, video] = match;
     const parsed = new Date(`${date}T00:00:00Z`);
     if (!Number.isFinite(parsed.getTime()) || parsed.toISOString().slice(0, 10) !== date) {
       throw new Error(`${source}, line ${index + 1}: "${date}" is not a calendar date.`);
     }
-    tricks.push({ date, name: name.trim() });
+    const trick = { date, name: name.trim() };
+    if (video?.trim()) {
+      const filename = video.trim();
+      if (!isVideoFilename(filename)) {
+        throw new Error(`${source}, line ${index + 1}: use an MP4 filename, without folders or a URL.`);
+      }
+      trick.video = filename;
+    }
+    tricks.push(trick);
   }
   return tricks;
+}
+
+function isVideoFilename(filename) {
+  return /^[^/\\\u0000-\u001f\u007f]+\.mp4$/i.test(filename);
+}
+
+export function getVideoURL(person, filename) {
+  if (!skaters.some(skater => skater.id === person)) throw new Error("Unknown skater.");
+  if (!isVideoFilename(filename)) throw new Error("Use an MP4 filename without folders or a URL.");
+  return new URL(`../videos/${person}/${encodeURIComponent(filename)}`, import.meta.url).href;
 }
 
 export function sortTricks(tricks, order = "newest") {

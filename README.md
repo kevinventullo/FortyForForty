@@ -25,6 +25,22 @@ Click **Commit changes** to save to the branch used for Pages (normally `main`).
 If you create a pull request, merge it into that branch before expecting a site update.
 Once Pages is enabled, GitHub publishes the change automatically; allow a few minutes, then reload the page. Open pages do not update in real time.
 
+## Add a video
+
+1. Open the person's video folder on GitHub: [Andrew](videos/andrew/), [Kevin](videos/kevin/), or [Erik](videos/erik/).
+2. Choose **Add file → Upload files**, select your MP4 (for example, `half-cab-flip.mp4`), and **Commit changes** to `main`.
+3. Edit the person's file in `data/` and append the filename to the landed trick:
+
+   ```text
+   Half cab flip | 2026-11-14 | half-cab-flip.mp4
+   ```
+
+4. Commit the text edit to `main`. Wait for Pages to deploy, reload the website, and click the trick name.
+
+Use just the filename, matching capitalization and spaces exactly. The example above uses `videos/andrew/half-cab-flip.mp4`. The filename does not have to match the trick name. Leave the third field off for tricks without a video.
+
+Use an MP4 containing H.264 video (AAC audio if included). Renaming a `.mov` file does not convert it. GitHub's browser upload limit is **25 MiB per file**. [Upload instructions](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository) · [Video formats](https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Video_codecs)
+
 ## Host on GitHub Pages when ready
 
 This site is configured for GitHub Pages using the `main` branch and the repository root.
@@ -35,9 +51,10 @@ This site is configured for GitHub Pages using the `main` branch and the reposit
 ```sh
 node --test tests/data.test.mjs
 node --check assets/app.mjs
+node --check assets/video.mjs
 ```
 
-The tests cover section editing, moving unfinished tricks to landed, date validation, sorting, time-zone-safe dates, and preservation of the initial imported tricks. No npm install is needed.
+The tests cover section editing, moving unfinished tricks to landed, date and video filename validation, sorting, time-zone-safe dates, and preservation of the initial imported tricks. No npm install is needed.
 
 ## Run locally
 

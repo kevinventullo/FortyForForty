@@ -1,5 +1,6 @@
 # Erik's tricks
-# Landed: Trick name | YYYY-MM-DD
+# Landed: Trick name | YYYY-MM-DD | filename.mp4 (video is optional)
+# Upload video files to videos/erik/ and use the exact filename.
 # Not Yet Done: Trick name only, no date
 # When landed, move the trick to [Landed] and add its date.
 
