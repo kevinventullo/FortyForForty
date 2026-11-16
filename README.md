@@ -1,7 +1,7 @@
 # Forty for Forty
 
-Simple skateboarding trick lists for Andrew, Kevin, and Erik.
-Plain HTML, CSS, and JavaScript. No dependencies, accounts, database, or build step.
+Simple skateboarding trick lists.
+Plain HTML, CSS, and JavaScript.
 
 ## Run locally
 
