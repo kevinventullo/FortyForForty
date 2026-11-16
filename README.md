@@ -1,7 +1,7 @@
 # Forty for Forty
 
 Skateboarding trick lists.
-Plain HTML, CSS, and JavaScript.
+HTML, CSS, and JavaScript.
 
 ## Add or correct tricks
 
