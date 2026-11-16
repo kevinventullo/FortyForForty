@@ -1,6 +1,6 @@
 # Forty for Forty
 
-Simple skateboarding trick lists.
+Skateboarding trick lists.
 Plain HTML, CSS, and JavaScript.
 
 ## Run locally
