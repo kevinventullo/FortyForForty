@@ -18,10 +18,14 @@ Nollie varial kickflip | 2026-11-14
 [Not Yet Done]
 Bs Flip
 Fs Flip
+Varial Flip
 Nollie 360 Shove
 Nollie bs 360 shove
 Fakie Varial Flip
+Fakie Heelflip
+Nollie Heelflip
 Switch Pop Shove It
+Switch Fs Pop Shove It
 Switch flip
 Switch fs flip
 Switch bs flip
@@ -29,8 +33,7 @@ Switch bs heel
 Fs Heel
 
 Tre Flip
-Varial Heelflip
-Inward Heelflip
+
 Popped backside bigspin
 
 Popped Nollie bs bigspin
@@ -42,10 +45,11 @@ Nollie fs heel
 
 Fakie Tre Flip
 Fakie Bigspin Flip
-Fakie Heelflip
+
 Fakie Fs Flip
 
-
+Varial Heelflip
+Inward Heelflip
 
 Switch Varial Flip
 Switch Hardflip
