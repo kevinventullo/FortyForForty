@@ -1,19 +1,16 @@
-# Andrew's tricks
 # Landed: Trick name | YYYY-MM-DD | filename.mp4 (video is optional)
-# Upload video files to videos/andrew/ and use the exact filename.
-# Not Yet Done: Trick name only, no date
-# When landed, move the trick to [Landed] and add its date.
+# Not Yet Done: Trick name only
 
 [Landed]
+Half Cab Flip | 2026-11-14
+Fakie flip | 2026-11-14
+Nollie varial kickflip | 2026-11-14
+No comply bigspin heel | 2026-11-10
 Heelflip | 2026-10-10
 Kickflip | 2026-10-10
 Nollie bs bigspin | 2026-10-10
 Nollie Flip | 2026-10-10
 Switch Heel | 2026-10-10
-No comply bigspin heel | 2026-11-10
-Half cab flip | 2026-11-14
-Fakie flip | 2026-11-14
-Nollie varial kickflip | 2026-11-14
 
 [Not Yet Done]
 Bs Flip
@@ -31,34 +28,23 @@ Switch fs flip
 Switch bs flip
 Switch bs heel
 Fs Heel
-
 Tre Flip
-
 Popped backside bigspin
-
 Popped Nollie bs bigspin
 Popped Nollie fs bigspin
 Nollie bs flip
 Nollie fs flip
 Nollie bs heel
 Nollie fs heel
-
 Fakie Tre Flip
 Fakie Bigspin Flip
-
 Fakie Fs Flip
-
 Varial Heelflip
 Inward Heelflip
-
 Switch Varial Flip
 Switch Hardflip
 Switch Tre Flip
 Switch Inward Heel
-
-
-
-
 Nollie 360 Flip
 Nollie varial heel
 Nollie hardflip
