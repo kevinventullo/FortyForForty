@@ -2,3 +2,8 @@
 .preview/
 __pycache__/
 /steam.png
+
+node_modules/
+.wrangler/
+.dev.vars*
+.env*

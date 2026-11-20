@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Edit trick list</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/editor.css">
+  <script type="module" src="assets/editor.mjs"></script>
+</head>
+<body>
+  <main>
+    <a id="back" href="index.html">Back</a>
+    <h1 id="title">Edit trick list</h1>
+    <p id="message" role="status" aria-live="polite"></p>
+    <form id="login" hidden>
+      <input id="username" type="text" name="username" autocomplete="username" hidden>
+      <fieldset>
+        <label>Password <input id="password" name="password" type="password" autocomplete="current-password" required maxlength="256"></label>
+        <button type="submit">Edit list</button>
+      </fieldset>
+    </form>
+    <form id="editor" hidden>
+      <fieldset id="editor-fields">
+        <div class="editor-toolbar">
+        <div class="editor-actions">
+          <button id="add" type="button">Add trick</button>
+          <button type="submit">Save changes</button>
+          <button id="logout" type="button" class="text-button">Log out</button>
+          <button id="reload" type="button" hidden>Reload latest list</button>
+        </div>
+        <p id="save-message" role="status" aria-live="polite"></p>
+        </div>
+        <div id="entries"></div>
+      </fieldset>
+    </form>
+    <noscript>Enable JavaScript to edit this list.</noscript>
+  </main>
+</body>
+</html>

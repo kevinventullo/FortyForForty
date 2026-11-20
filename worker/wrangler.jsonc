@@ -1,0 +1,48 @@
+{
+  "name": "forty-for-forty-editor",
+  "main": "index.mjs",
+  "compatibility_date": "2026-11-18",
+  "workers_dev": true,
+  "vars": {
+    "GITHUB_OWNER": "kevinventullo",
+    "GITHUB_REPO": "FortyForForty",
+    "GITHUB_BRANCH": "main",
+    "EDITORS": [
+      "andrew",
+      "kevin",
+      "erik"
+    ],
+    "ALLOWED_ORIGINS": [
+      "https://kevinventullo.github.io"
+    ]
+  },
+  "ratelimits": [
+    {
+      "name": "LOGIN_IP_LIMIT",
+      "namespace_id": "440401",
+      "simple": {
+        "limit": 5,
+        "period": 60
+      }
+    },
+    {
+      "name": "LOGIN_PERSON_LIMIT",
+      "namespace_id": "440402",
+      "simple": {
+        "limit": 20,
+        "period": 60
+      }
+    },
+    {
+      "name": "EDITOR_LIMIT",
+      "namespace_id": "440403",
+      "simple": {
+        "limit": 30,
+        "period": 60
+      }
+    }
+  ],
+  "observability": {
+    "enabled": false
+  }
+}

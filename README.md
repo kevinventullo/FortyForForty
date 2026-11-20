@@ -3,6 +3,12 @@
 Skateboarding trick lists.
 HTML, CSS, and JavaScript.
 
+## Edit on the site
+
+Open your page, choose **Edit**, enter your editing password, then make changes and choose **Save changes**. The public list updates after publishing finishes.
+
+Backend setup and password resets are documented in [worker/README.md](worker/README.md).
+
 ## Add or correct tricks
 
 Open the person's file in `data/` on GitHub and click the pencil (Edit). Each file has two sections:

@@ -1,3 +1,4 @@
+import { EDITOR_API } from "./editor-config.mjs";
 import { loadTricks, sortTricks, formatDate, getVideoURL } from "./data.mjs";
 import { createVideoPlayer } from "./video.mjs";
 
@@ -62,3 +63,9 @@ async function renderTricks() {
 }
 
 renderTricks();
+
+const editLink = document.querySelector("[data-edit-link]");
+if (editLink && EDITOR_API) {
+  editLink.href = "edit.html?person=" + encodeURIComponent(document.body.dataset.person);
+  editLink.hidden = false;
+}

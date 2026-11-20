@@ -1,0 +1,25 @@
+fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+label { display: flex; flex-direction: column; gap: 5px; font-size: 13px; color: #bbc7d0; }
+input, select, button { box-sizing: border-box; font: inherit; }
+input, select { width: 100%; min-width: 0; padding: 9px 10px; border: 1px solid #405568; border-radius: 0; background: #17232f; color: #e4e8ec; }
+button { padding: 9px 13px; border: 1px solid #405568; background: #263e50; color: #e4e8ec; cursor: pointer; }
+button:disabled, fieldset:disabled { opacity: .65; cursor: default; }
+input:focus-visible, select:focus-visible, button:focus-visible { outline: 2px solid #a9cce5; outline-offset: 2px; }
+#login { max-width: 320px; }
+#login button { margin-top: 16px; }
+#message, #save-message { font-size: 14px; }
+#message.error, #save-message.error { color: #f0b4ab; }
+#message:empty, #save-message:empty { display: none; }
+#entries { display: grid; gap: 10px; }
+.edit-entry { padding: 16px; background: #263e50; display: grid; gap: 12px; }
+.entry-fields { display: grid; grid-template-columns: 1fr 1fr auto; gap: 12px; align-items: end; }
+.entry-fields .remove { font-size: 13px; padding: 10px; }
+.editor-actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 0 0 12px; }
+.text-button { background: transparent; }
+.editor-toolbar { position: sticky; top: 0; z-index: 1; padding-top: 12px; background: #17232f; }
+#save-message { margin: 0; padding-bottom: 12px; }
+input, select { font-size: 16px; }
+@media (max-width: 420px) {
+  .entry-fields { grid-template-columns: 1fr 1fr; }
+  .entry-fields .remove { grid-column: 2; justify-self: end; }
+}
